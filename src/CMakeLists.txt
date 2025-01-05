@@ -18,7 +18,7 @@ target_sources(kwin5_aurorae PRIVATE
 )
 
 target_compile_definitions(kwin5_aurorae PRIVATE
-    -DTRANSLATION_DOMAIN=\"kwin\"
+    -DTRANSLATION_DOMAIN=\"aurorae\"
 )
 
 target_link_libraries(kwin5_aurorae
@@ -39,7 +39,7 @@ target_sources(decorationplugin PRIVATE
     decorationplugin.cpp
 )
 target_compile_definitions(decorationplugin PRIVATE
-    -DTRANSLATION_DOMAIN=\"kwin\"
+    -DTRANSLATION_DOMAIN=\"aurorae\"
 )
 target_link_libraries(decorationplugin PRIVATE
     KDecoration3::KDecoration

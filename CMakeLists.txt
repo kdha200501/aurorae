@@ -15,16 +15,11 @@ set(KDE_COMPILERSETTINGS_LEVEL "5.82")
 find_package(ECM ${KF6_MIN_VERSION} REQUIRED NO_MODULE)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
 
-include(CMakeDependentOption)
 include(CMakePackageConfigHelpers)
 include(FeatureSummary)
 include(WriteBasicConfigVersionFile)
-include(GenerateExportHeader)
 include(CheckCXXSourceCompiles)
 include(CheckCXXCompilerFlag)
-include(CheckIncludeFile)
-include(CheckIncludeFiles)
-include(CheckSymbolExists)
 
 include(KDEInstallDirs)
 include(KDECMakeSettings)
@@ -32,52 +27,26 @@ include(KDECompilerSettings NO_POLICY_SCOPE)
 include(KDEClangFormat)
 include(KDEGitCommitHooks)
 
-include(ECMFindQmlModule)
-include(ECMInstallIcons)
-include(ECMOptionalAddSubdirectory)
-include(ECMConfiguredInstall)
-include(ECMQtDeclareLoggingCategory)
-include(ECMSetupQtPluginMacroNames)
-include(ECMSetupVersion)
-include(ECMQmlModule)
-include(ECMGenerateQmlTypes)
 include(ECMDeprecationSettings)
 
 find_package(Qt6 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS
-    Concurrent
     Core
-    Core5Compat
     DBus
     Quick
     UiTools
-    WaylandClient
     Widgets
-    Sensors
-    Svg
 )
 
 find_package(KF6 ${KF6_MIN_VERSION} REQUIRED COMPONENTS
-    Auth
     ColorScheme
     Config
-    ConfigWidgets
     CoreAddons
-    Crash
-    DBusAddons
-    Declarative
-    GlobalAccel
-    GuiAddons
     I18n
-    IdleTime
     KCMUtils
     NewStuff
     Package
-    Service
-    Service
     Svg
-    WidgetsAddons
     WindowSystem
-    XmlGui
 )
 
 find_package(KDecoration3 ${PROJECT_DEP_VERSION} CONFIG REQUIRED)

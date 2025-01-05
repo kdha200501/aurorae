@@ -1,22 +1,20 @@
-########### decoration ###############
 include_directories(
     ./lib
     ${CMAKE_CURRENT_BINARY_DIR}
     ${CMAKE_CURRENT_SOURCE_DIR}
 )
 
-set(kwin5_aurorae_PART_SRCS
+add_library(kwin5_aurorae MODULE)
+set_target_properties(kwin5_aurorae PROPERTIES
+    LIBRARY_OUTPUT_NAME "org.kde.kwin.aurorae"
+)
+
+target_sources(kwin5_aurorae PRIVATE
     aurorae.cpp
     decorationoptions.cpp
     lib/auroraetheme.cpp
     lib/themeconfig.cpp
     renderer.cpp
-)
-
-add_library(kwin5_aurorae MODULE ${kwin5_aurorae_PART_SRCS})
-set_target_properties(kwin5_aurorae PROPERTIES
-    LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin/org.kde.kdecoration3/"
-    LIBRARY_OUTPUT_NAME "org.kde.kwin.aurorae"
 )
 
 target_compile_definitions(kwin5_aurorae PRIVATE
@@ -34,18 +32,16 @@ target_link_libraries(kwin5_aurorae
 
 install(TARGETS kwin5_aurorae DESTINATION ${KDE_INSTALL_PLUGINDIR}/org.kde.kdecoration3)
 
-set(decoration_plugin_SRCS
+add_library(decorationplugin SHARED)
+target_sources(decorationplugin PRIVATE
     colorhelper.cpp
     decorationoptions.cpp
     decorationplugin.cpp
 )
-
-add_library(decorationplugin SHARED ${decoration_plugin_SRCS})
-set_target_properties(decorationplugin PROPERTIES LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin/org/kde/kwin/decoration/")
 target_compile_definitions(decorationplugin PRIVATE
     -DTRANSLATION_DOMAIN=\"kwin\"
 )
-target_link_libraries(decorationplugin
+target_link_libraries(decorationplugin PRIVATE
     KDecoration3::KDecoration
     KF6::ColorScheme
     Qt::Quick
@@ -53,14 +49,7 @@ target_link_libraries(decorationplugin
 install(TARGETS decorationplugin DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/kwin/decoration)
 
 configure_file(aurorae.knsrc.cmake ${CMAKE_CURRENT_BINARY_DIR}/aurorae.knsrc)
-
-########### install files ###############
-
-if (KWIN_BUILD_KCMS)
-    add_subdirectory(config)
-
-    install(FILES ${CMAKE_CURRENT_BINARY_DIR}/aurorae.knsrc DESTINATION ${KDE_INSTALL_KNSRCDIR})
-endif()
+install(FILES ${CMAKE_CURRENT_BINARY_DIR}/aurorae.knsrc DESTINATION ${KDE_INSTALL_KNSRCDIR})
 
 install(
     FILES
@@ -73,14 +62,19 @@ install(
         qml/MenuButton.qml
         qml/aurorae.qml
     DESTINATION
-        ${KDE_INSTALL_DATADIR}/kwin/aurorae)
-set(QMLFILES
-    qml/AppMenuButton.qml
-    qml/ButtonGroup.qml
-    qml/Decoration.qml
-    qml/DecorationButton.qml
-    qml/MenuButton.qml
-    qml/qmldir
+        ${KDE_INSTALL_DATADIR}/kwin/aurorae
 )
-install(FILES ${QMLFILES} DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/kwin/decoration)
-file(COPY ${QMLFILES} DESTINATION ${CMAKE_BINARY_DIR}/bin/org/kde/kwin/decoration/)
+
+install(
+    FILES
+        qml/AppMenuButton.qml
+        qml/ButtonGroup.qml
+        qml/Decoration.qml
+        qml/DecorationButton.qml
+        qml/MenuButton.qml
+        qml/qmldir
+    DESTINATION
+        ${KDE_INSTALL_QMLDIR}/org/kde/kwin/decoration
+)
+
+add_subdirectory(config)

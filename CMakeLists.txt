@@ -1,4 +1,117 @@
-add_subdirectory(src)
-#add_subdirectory(themes/example-deco)
+cmake_minimum_required(VERSION 3.16)
 
+set(PROJECT_VERSION "6.2.80") # Handled by release scripts
+project(aurorae VERSION ${PROJECT_VERSION})
+
+set(CMAKE_C_STANDARD 99)
+set(CMAKE_CXX_STANDARD 23)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+set(PROJECT_DEP_VERSION "6.2.0")
+set(QT_MIN_VERSION "6.7.0")
+set(KF6_MIN_VERSION "6.5.0")
+set(KDE_COMPILERSETTINGS_LEVEL "5.82")
+
+find_package(ECM ${KF6_MIN_VERSION} REQUIRED NO_MODULE)
+set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
+
+include(CMakeDependentOption)
+include(CMakePackageConfigHelpers)
+include(FeatureSummary)
+include(WriteBasicConfigVersionFile)
+include(GenerateExportHeader)
+include(CheckCXXSourceCompiles)
+include(CheckCXXCompilerFlag)
+include(CheckIncludeFile)
+include(CheckIncludeFiles)
+include(CheckSymbolExists)
+
+include(KDEInstallDirs)
+include(KDECMakeSettings)
+include(KDECompilerSettings NO_POLICY_SCOPE)
+include(KDEClangFormat)
+include(KDEGitCommitHooks)
+
+include(ECMFindQmlModule)
+include(ECMInstallIcons)
+include(ECMOptionalAddSubdirectory)
+include(ECMConfiguredInstall)
+include(ECMQtDeclareLoggingCategory)
+include(ECMSetupQtPluginMacroNames)
+include(ECMSetupVersion)
+include(ECMQmlModule)
+include(ECMGenerateQmlTypes)
+include(ECMDeprecationSettings)
+
+find_package(Qt6 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS
+    Concurrent
+    Core
+    Core5Compat
+    DBus
+    Quick
+    UiTools
+    WaylandClient
+    Widgets
+    Sensors
+    Svg
+)
+
+find_package(KF6 ${KF6_MIN_VERSION} REQUIRED COMPONENTS
+    Auth
+    ColorScheme
+    Config
+    ConfigWidgets
+    CoreAddons
+    Crash
+    DBusAddons
+    Declarative
+    GlobalAccel
+    GuiAddons
+    I18n
+    IdleTime
+    KCMUtils
+    NewStuff
+    Package
+    Service
+    Service
+    Svg
+    WidgetsAddons
+    WindowSystem
+    XmlGui
+)
+
+find_package(KDecoration3 ${PROJECT_DEP_VERSION} CONFIG REQUIRED)
+
+check_cxx_compiler_flag(-Wno-unused-parameter COMPILER_UNUSED_PARAMETER_SUPPORTED)
+if (COMPILER_UNUSED_PARAMETER_SUPPORTED)
+    add_compile_options(-Wno-unused-parameter)
+endif()
+
+add_definitions(
+    -DQT_NO_KEYWORDS
+    -DQT_USE_QSTRINGBUILDER
+    -DQT_NO_URL_CAST_FROM_STRING
+    -DQT_NO_CAST_TO_ASCII
+    -DQT_NO_FOREACH
+
+    # Prevent EGL headers from including platform headers, in particular Xlib.h.
+    -DMESA_EGL_NO_X11_HEADERS
+    -DEGL_NO_X11
+    -DEGL_NO_PLATFORM_SPECIFIC_TYPES
+)
+
+ecm_set_disabled_deprecation_versions(QT 5.15
+    KF 6.9.0
+)
+
+add_subdirectory(src)
 add_subdirectory(themes)
+
+# add clang-format target for all our real source files
+file(GLOB_RECURSE ALL_CLANG_FORMAT_SOURCE_FILES *.cpp *.h)
+kde_clang_format(${ALL_CLANG_FORMAT_SOURCE_FILES})
+kde_configure_git_pre_commit_hook(CHECKS CLANG_FORMAT)
+
+ki18n_install(po)
+
+feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)

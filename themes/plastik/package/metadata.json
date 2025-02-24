@@ -4,13 +4,34 @@
         "Authors": [
             {
                 "Email": "mgraesslin@kde.org",
-                "Name": "Martin Gräßlin"
+                "Name": "Martin Gräßlin",
+                "Name[ca]": "Martin Gräßlin",
+                "Name[es]": "Martin Gräßlin",
+                "Name[sl]": "Martin Gräßlin",
+                "Name[sv]": "Martin Gräßlin",
+                "Name[tr]": "Martin Gräßlin",
+                "Name[uk]": "Martin Gräßlin",
+                "Name[x-test]": "xxMartin Gräßlinxx"
             }
         ],
         "Description": "The classic theme known from KDE 3",
+        "Description[ca]": "El tema clàssic conegut des del KDE 3",
+        "Description[es]": "El clásico tema conocido desde KDE 3",
+        "Description[sl]": "Klasična tema znana iz KDE 3",
+        "Description[sv]": "Det klassiska temat känt från KDE 3",
+        "Description[tr]": "KDE 3’ten bildiğimiz klasik tema",
+        "Description[uk]": "Класична тема, відома з часів KDE 3",
+        "Description[x-test]": "xxThe classic theme known from KDE 3xx",
         "Id": "kwin4_decoration_qml_plastik",
         "License": "GPL",
-        "Name": "Plastik"
+        "Name": "Plastik",
+        "Name[ca]": "Plastik",
+        "Name[es]": "Plastik",
+        "Name[sl]": "Plastik",
+        "Name[sv]": "Plastik",
+        "Name[tr]": "Plastik",
+        "Name[uk]": "Plastik",
+        "Name[x-test]": "xxPlastikxx"
     },
     "X-KWin-Config-TranslationDomain": "aurorae"
 }

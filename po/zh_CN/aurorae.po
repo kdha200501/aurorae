@@ -21,45 +21,45 @@ msgstr ""
 #, kde-format
 msgctxt "@item:inlistbox Button size:"
 msgid "Tiny"
-msgstr ""
+msgstr "小"
 
 #: config/auroraeconfig.cpp:49
 #, kde-format
 msgctxt "@item:inlistbox Button size:"
 msgid "Normal"
-msgstr ""
+msgstr "正常"
 
 #: config/auroraeconfig.cpp:50
 #, kde-format
 msgctxt "@item:inlistbox Button size:"
 msgid "Large"
-msgstr ""
+msgstr "大"
 
 #: config/auroraeconfig.cpp:51
 #, kde-format
 msgctxt "@item:inlistbox Button size:"
 msgid "Very Large"
-msgstr ""
+msgstr "特大"
 
 #: config/auroraeconfig.cpp:52
 #, kde-format
 msgctxt "@item:inlistbox Button size:"
 msgid "Huge"
-msgstr ""
+msgstr "超大"
 
 #: config/auroraeconfig.cpp:53
 #, kde-format
 msgctxt "@item:inlistbox Button size:"
 msgid "Very Huge"
-msgstr ""
+msgstr "超特大"
 
 #: config/auroraeconfig.cpp:54
 #, kde-format
 msgctxt "@item:inlistbox Button size:"
 msgid "Oversized"
-msgstr ""
+msgstr "极大"
 
 #: config/auroraeconfig.cpp:57
 #, kde-format
 msgid "Button size:"
-msgstr ""
+msgstr "按钮大小："

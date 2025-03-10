@@ -28,6 +28,7 @@ include(KDEClangFormat)
 include(KDEGitCommitHooks)
 
 include(ECMDeprecationSettings)
+include(ECMSetupVersion)
 
 find_package(Qt6 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS
     Core
@@ -75,6 +76,23 @@ ecm_set_disabled_deprecation_versions(QT 5.15
 
 add_subdirectory(src)
 add_subdirectory(themes)
+
+ecm_setup_version(${PROJECT_VERSION}
+    VARIABLE_PREFIX AURORAE
+    PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/AuroraeConfigVersion.cmake"
+)
+set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/Aurorae")
+
+configure_package_config_file("${CMAKE_CURRENT_SOURCE_DIR}/AuroraeConfig.cmake.in"
+                              "${CMAKE_CURRENT_BINARY_DIR}/AuroraeConfig.cmake"
+                              PATH_VARS KDE_INSTALL_FULL_DATADIR
+                              INSTALL_DESTINATION ${CMAKECONFIG_INSTALL_DIR}
+)
+install(FILES "${CMAKE_CURRENT_BINARY_DIR}/AuroraeConfig.cmake"
+              "${CMAKE_CURRENT_BINARY_DIR}/AuroraeConfigVersion.cmake"
+        DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
+        COMPONENT Devel
+)
 
 # add clang-format target for all our real source files
 file(GLOB_RECURSE ALL_CLANG_FORMAT_SOURCE_FILES *.cpp *.h)

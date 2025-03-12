@@ -45,4 +45,4 @@ ContentWarning=Executables
 Categories=Window Decoration Aurorae
 Uncompress=archive
 TargetDir=aurorae/themes
-AdoptionCommand=@KDE_INSTALL_LIBEXECDIR@/kwin-applywindowdecoration %f
+AdoptionCommand=@KDE_INSTALL_FULL_LIBEXECDIR@/plasma-apply-aurorae %f

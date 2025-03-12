@@ -40,6 +40,7 @@ Name[x-test]=xxAurorae Window Decorationsxx
 Name[zh_CN]=Aurorae 极光窗口装饰
 Name[zh_TW]=Aurorae 視窗裝飾
 
+AliasFor=window-decorations
 ProvidersUrl=https://autoconfig.kde.org/ocs/providers.xml
 ContentWarning=Executables
 Categories=Window Decoration Aurorae

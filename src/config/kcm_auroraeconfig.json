@@ -20,25 +20,6 @@
         "Description[x-test]": "xxWindow Decoration Theme Enginexx",
         "Description[zh_CN]": "窗口装饰主题引擎",
         "Description[zh_TW]": "視窗裝飾主題引擎",
-        "Name": "Aurorae Window Decoration",
-        "Name[ca@valencia]": "Aurorae",
-        "Name[ca]": "Aurorae",
-        "Name[es]": "Aurorae",
-        "Name[fi]": "Aurorae",
-        "Name[fr]": "Aurorae",
-        "Name[gl]": "Aurorae",
-        "Name[he]": "Aurorae",
-        "Name[ia]": "Aurorae",
-        "Name[it]": "Aurorae",
-        "Name[ka]": "Aurorae",
-        "Name[lv]": "Aurorae",
-        "Name[nl]": "Aurorae",
-        "Name[sl]": "Aurorae",
-        "Name[sv]": "Aurorae",
-        "Name[tr]": "Aurorae",
-        "Name[uk]": "Aurorae",
-        "Name[x-test]": "xxAurorae Window Decorationxx",
-        "Name[zh_CN]": "Aurorae 极光",
-        "Name[zh_TW]": "Aurorae"
+        "Name": "Aurorae Window Decoration"
     }
 }

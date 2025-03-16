@@ -1,88 +1,85 @@
-# Translation of aurorae.po to Catalan
-# Copyright (C) 2025 This_file_is_part_of_KDE
-# This file is distributed under the license LGPL version 2.1 or
-# version 3 or later versions approved by the membership of KDE e.V.
+# English (GB).translations for Aurorae
+# Copyright (C) 2025 This file is copyright:
+# This file is distributed under the same license as the aurorae package.
+# Jonathan Marten <jonathan.marten@kdemail.net>, 2025.
 #
-# Josep M. Ferrer <txemaq@gmail.com>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: aurorae\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-15 00:43+0000\n"
-"PO-Revision-Date: 2025-03-15 10:52+0100\n"
-"Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
-"Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
-"Language: ca\n"
+"PO-Revision-Date: 2025-03-15 19:12+0000\n"
+"Last-Translator: Jonathan Marten <jonathan.marten@kdemail.net>\n"
+"Language-Team: British English <kde-l10n-en_gb@kde.org>\n"
+"Language: en_GB\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.3\n"
 
 #: src/config/auroraeconfig.cpp:48
 #, kde-format
 msgctxt "@item:inlistbox Button size:"
 msgid "Tiny"
-msgstr "Minúscul"
+msgstr ""
 
 #: src/config/auroraeconfig.cpp:49
 #, kde-format
 msgctxt "@item:inlistbox Button size:"
 msgid "Normal"
-msgstr "Normal"
+msgstr ""
 
 #: src/config/auroraeconfig.cpp:50
 #, kde-format
 msgctxt "@item:inlistbox Button size:"
 msgid "Large"
-msgstr "Gran"
+msgstr ""
 
 #: src/config/auroraeconfig.cpp:51
 #, kde-format
 msgctxt "@item:inlistbox Button size:"
 msgid "Very Large"
-msgstr "Molt gran"
+msgstr ""
 
 #: src/config/auroraeconfig.cpp:52
 #, kde-format
 msgctxt "@item:inlistbox Button size:"
 msgid "Huge"
-msgstr "Enorme"
+msgstr ""
 
 #: src/config/auroraeconfig.cpp:53
 #, kde-format
 msgctxt "@item:inlistbox Button size:"
 msgid "Very Huge"
-msgstr "Molt enorme"
+msgstr ""
 
 #: src/config/auroraeconfig.cpp:54
 #, kde-format
 msgctxt "@item:inlistbox Button size:"
 msgid "Oversized"
-msgstr "Fora de mida"
+msgstr ""
 
 #: src/config/auroraeconfig.cpp:57
 #, kde-format
 msgid "Button size:"
-msgstr "Mida dels botons:"
+msgstr ""
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, PlastikConfigDialog)
 #: themes/plastik/package/contents/ui/config.ui:14
 #, kde-format
 msgid "Config Dialog"
-msgstr "Diàleg de configuració"
+msgstr "Config Dialogue"
 
 #. i18n: ectx: property (title), widget (KButtonGroup, titleAlign)
 #: themes/plastik/package/contents/ui/config.ui:23
 #, kde-format
 msgid "Title &Alignment"
-msgstr "&Alineació del títol"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QRadioButton, kcfg_titleAlignLeft)
 #: themes/plastik/package/contents/ui/config.ui:29
 #, kde-format
 msgid "Left"
-msgstr "Esquerra"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QRadioButton, kcfg_titleAlignCenter)
 #: themes/plastik/package/contents/ui/config.ui:36
@@ -94,7 +91,7 @@ msgstr "Centre"
 #: themes/plastik/package/contents/ui/config.ui:43
 #, kde-format
 msgid "Right"
-msgstr "Dreta"
+msgstr ""
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_coloredBorder)
 #: themes/plastik/package/contents/ui/config.ui:53
@@ -103,14 +100,14 @@ msgid ""
 "Check this option if the window border should be painted in the titlebar "
 "color. Otherwise it will be painted in the background color."
 msgstr ""
-"Marqueu aquesta opció si la vora de la finestra s'ha de pintar en el color "
-"de la barra de títol. Altrament es pintarà en el color del fons."
+"Check this option if the window border should be painted in the titlebar "
+"colour. Otherwise it will be painted in the background colour."
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_coloredBorder)
 #: themes/plastik/package/contents/ui/config.ui:56
 #, kde-format
 msgid "Colored window border"
-msgstr "Vora de la finestra acolorida"
+msgstr "Coloured window border"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_animateButtons)
 #: themes/plastik/package/contents/ui/config.ui:66
@@ -119,11 +116,9 @@ msgid ""
 "Check this option if you want the buttons to fade in when the mouse pointer "
 "hovers over them and fade out again when it moves away."
 msgstr ""
-"Marqueu aquesta opció si desitgeu que els botons sobresurtin quan el punter "
-"del ratolí passi per sobre i tornin a l'estat normal quan s'allunyi."
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_animateButtons)
 #: themes/plastik/package/contents/ui/config.ui:69
 #, kde-format
 msgid "Animate buttons"
-msgstr "Anima els botons"
+msgstr ""

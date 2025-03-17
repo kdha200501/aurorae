@@ -20,6 +20,13 @@
         "Description[x-test]": "xxWindow Decoration Theme Enginexx",
         "Description[zh_CN]": "窗口装饰主题引擎",
         "Description[zh_TW]": "視窗裝飾主題引擎",
-        "Name": "Aurorae Window Decoration"
+        "Name": "Aurorae Window Decoration",
+        "Name[ca]": "Decoració de finestres Aurorae",
+        "Name[es]": "Decoración de ventanas Aurorae",
+        "Name[ka]": "ფანჯრის დეკორაცია Aurorae",
+        "Name[sl]": "Dekoracija oken Aurorae",
+        "Name[tr]": "Aurorae Pencere Dekorasyonu",
+        "Name[uk]": "Декорації вікон Aurorae",
+        "Name[x-test]": "xxAurorae Window Decorationxx"
     }
 }

@@ -1,6 +1,5 @@
 # Translation of aurorae to Norwegian Bokmål
 #
-#
 msgid ""
 msgstr ""
 "Project-Id-Version: aurorae\n"

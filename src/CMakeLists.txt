@@ -25,7 +25,6 @@ target_link_libraries(kwin5_aurorae
     KDecoration3::KDecoration
     KF6::I18n
     KF6::Package
-    KF6::WindowSystem
     KF6::ConfigGui
     Qt::Quick
 )

@@ -46,11 +46,16 @@ find_package(KF6 ${KF6_MIN_VERSION} REQUIRED COMPONENTS
     KCMUtils
     NewStuff
     Package
-    Svg
-    WindowSystem
 )
 
 find_package(KDecoration3 ${PROJECT_DEP_VERSION} CONFIG REQUIRED)
+
+find_package(KF6Svg ${KF6_MIN_VERSION} CONFIG)
+set_package_properties(KF6Svg PROPERTIES
+    DESCRIPTION "A library for rendering SVG-based themes"
+    PURPOSE "QML runtime dependency"
+    TYPE RUNTIME
+)
 
 check_cxx_compiler_flag(-Wno-unused-parameter COMPILER_UNUSED_PARAMETER_SUPPORTED)
 if (COMPILER_UNUSED_PARAMETER_SUPPORTED)

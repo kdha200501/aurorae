@@ -83,13 +83,13 @@ bool Decoration::init()
     m_decorationMaximized = std::make_unique<KSvg::FrameSvg>();
     m_decorationMaximized->setImagePath(m_theme->decorationPath());
     m_decorationMaximized->setElementPrefix(m_decoration->hasElementPrefix(QStringLiteral("decoration-maximized")) ? QStringLiteral("decoration-maximized") : m_decoration->prefix());
-    m_decorationMaximized->setEnabledBorders(KSvg::FrameSvg::NoBorder);
+    m_decorationMaximized->setEnabledBorders(KSvg::FrameSvg::AllBorders);
     m_decorationMaximized->setDevicePixelRatio(devicePixelRatio);
 
     m_decorationMaximizedInactive = std::make_unique<KSvg::FrameSvg>();
     m_decorationMaximizedInactive->setImagePath(m_theme->decorationPath());
     m_decorationMaximizedInactive->setElementPrefix(m_decorationInactive->hasElementPrefix(QStringLiteral("decoration-maximized-inactive")) ? QStringLiteral("decoration-maximized-inactive") : m_decorationInactive->prefix());
-    m_decorationMaximizedInactive->setEnabledBorders(KSvg::FrameSvg::NoBorder);
+    m_decorationMaximizedInactive->setEnabledBorders(KSvg::FrameSvg::AllBorders);
     m_decorationMaximizedInactive->setDevicePixelRatio(devicePixelRatio);
 
     if (m_decoration->hasElementPrefix(QStringLiteral("innerborder"))) {
@@ -316,8 +316,10 @@ void Decoration::onWindowMaximizedChanged()
 
 void Decoration::onWindowCaptionChanged()
 {
-    if (!m_captionRect.isEmpty()) {
-        update(m_captionRect);
+    const QRectF oldCaptionRect = m_captionRect;
+    updateCaption();
+    if (!oldCaptionRect.isEmpty()) {
+        update(oldCaptionRect);
     }
 }
 
@@ -367,11 +369,18 @@ void Decoration::updateButtonSizeFactor()
 
 void Decoration::updateBorders()
 {
+    QMarginsF b;
     if (window()->isMaximized()) {
-        setBorders(m_theme->maximizedBorders(buttonSizeFactor()));
+        b = m_theme->maximizedBorders(buttonSizeFactor());
+        b.setLeft(std::max(0.0, b.left() - 1));
+        b.setRight(std::max(0.0, b.right() + 3));
+        b.setTop(std::max(0.0, b.top() - 7));
     } else {
-        setBorders(m_theme->borders(settings()->borderSize(), buttonSizeFactor()));
+        b = m_theme->borders(settings()->borderSize(), buttonSizeFactor());
+        b.setLeft(std::max(0.0, b.left() - 1));
+        b.setTop(std::max(0.0, b.top() - 7));
     }
+    setBorders(b);
 }
 
 void Decoration::updateResizeOnlyBorders()
@@ -431,12 +440,14 @@ void Decoration::updateTitleBar()
 
 void Decoration::updateCaption()
 {
-    const qreal top = window()->isMaximized() ? m_theme->titleEdgesMaximized().top() : m_theme->titleEdges().top();
-    const qreal left = m_leftButtons->geometry().right() + m_theme->titleBorderLeft();
-    const qreal right = m_rightButtons->geometry().left() - m_theme->titleBorderRight();
-    const qreal height = std::max(m_theme->titleHeight(), m_theme->buttonHeight());
+    const QFontMetricsF fm(settings()->font());
+    const qreal textWidth = fm.horizontalAdvance(window()->caption());
+    const qreal width = textWidth + 15;
+    const qreal height = 15;
+    const qreal top = (window()->isMaximized() ? m_theme->titleEdgesMaximized().top() : m_theme->titleEdges().top()) + 2;
+    const qreal x = (size().width() - width) / 2;
 
-    const QRectF captionRect(left, top, right - left, height);
+    const QRectF captionRect(x, top, width, height);
     if (m_captionRect == captionRect) {
         return;
     }
@@ -449,12 +460,8 @@ void Decoration::positionButtons()
 {
     m_buttonsTimer->stop();
 
-    const QMarginsF edges = window()->isMaximized() ? m_theme->titleEdgesMaximized() : m_theme->titleEdges();
-    const qreal buttonMargin = window()->isMaximized() ? m_theme->buttonMarginTopMaximized() : m_theme->buttonMarginTop();
-
-    const QRectF innerTitleRect = QRectF(0, 0, size().width(), borders().top()).marginsRemoved(edges);
-    m_leftButtons->setPos(QPointF(innerTitleRect.x(), innerTitleRect.y() + buttonMargin));
-    m_rightButtons->setPos(QPointF(innerTitleRect.x() + innerTitleRect.width() - m_rightButtons->geometry().width(), innerTitleRect.y() + buttonMargin));
+    m_leftButtons->setPos(QPointF(5.0, 3.0));
+    m_rightButtons->setPos(QPointF(size().width() - m_rightButtons->geometry().width() - 7.0, 3.0));
 }
 
 void Decoration::updateDecoration()
@@ -575,19 +582,37 @@ void Decoration::paint(QPainter *painter, const QRectF &repaintRegion)
                                                           borders().top() - m_currentDecoration->marginSize(KSvg::FrameSvg::TopMargin)));
     }
 
+    const QColor bgColor = window()->isActive() ? QColor(0xCC, 0xCC, 0xCC) : QColor(0xDD, 0xDD, 0xDD);
+
     if (m_captionRect.intersects(repaintRegion)) {
-        const QString elidedCaption = painter->fontMetrics().elidedText(window()->caption(), Qt::ElideMiddle, m_captionRect.width());
+        QFont captionFont = settings()->font();
+        captionFont.setPixelSize(12);
+        const QFontMetrics captionFm(captionFont);
+        const QString elidedCaption = captionFm.elidedText(window()->caption(), Qt::ElideMiddle, m_captionRect.width());
         painter->save();
-        painter->setFont(settings()->font());
+        painter->setPen(Qt::NoPen);
+        painter->setBrush(bgColor);
+        painter->drawRect(m_captionRect);
+        painter->setFont(captionFont);
         painter->setPen(window()->isActive() ? m_theme->activeTextColor() : m_theme->inactiveTextColor());
-        painter->drawText(m_captionRect, m_theme->alignment() | m_theme->verticalAlignment() | Qt::TextSingleLine, elidedCaption);
+        painter->drawText(m_captionRect, Qt::AlignCenter | Qt::TextSingleLine, elidedCaption);
         painter->restore();
     }
 
     if (m_leftButtons->geometry().intersects(repaintRegion)) {
+        painter->save();
+        painter->setPen(Qt::NoPen);
+        painter->setBrush(bgColor);
+        painter->drawRect(m_leftButtons->geometry().adjusted(-3, -1, 3, 0));
+        painter->restore();
         m_leftButtons->paint(painter, repaintRegion);
     }
     if (m_rightButtons->geometry().intersects(repaintRegion)) {
+        painter->save();
+        painter->setPen(Qt::NoPen);
+        painter->setBrush(bgColor);
+        painter->drawRect(m_rightButtons->geometry().adjusted(-3, -1, 3, 0));
+        painter->restore();
         m_rightButtons->paint(painter, repaintRegion);
     }
 }

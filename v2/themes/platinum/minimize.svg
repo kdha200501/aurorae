@@ -1,0 +1,592 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="32.000031"
+   height="48"
+   viewBox="0 0 32.00003 48.000004"
+   version="1.1"
+   id="svg8"
+   inkscape:version="1.4 (e7c3feb100, 2024-10-09)"
+   sodipodi:docname="minimize.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#d1d1d1"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="17.98196"
+     inkscape:cx="15.459939"
+     inkscape:cy="22.327933"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     units="px"
+     inkscape:pagecheckerboard="true"
+     inkscape:showpageshadow="false"
+     fit-margin-top="10"
+     fit-margin-left="10"
+     fit-margin-right="10"
+     fit-margin-bottom="10"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:snap-bbox="true"
+     inkscape:bbox-paths="true"
+     inkscape:bbox-nodes="true"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:window-width="1646"
+     inkscape:window-height="981"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1">
+    <inkscape:grid
+       id="grid3423"
+       type="xygrid"
+       originx="-3.0957025e-08"
+       originy="4.2968512e-09"
+       spacingy="1"
+       spacingx="1"
+       units="px"
+       visible="true" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2">
+    <linearGradient
+       id="paint0_linear_19_6903"
+       x1="2"
+       y1="2"
+       x2="11"
+       y2="11"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         stop-color="#9A9A9A"
+         id="stop1" />
+      <stop
+         offset="1"
+         stop-color="#F1F1F1"
+         id="stop2" />
+    </linearGradient>
+    <linearGradient
+       id="paint0_linear_19_8762"
+       x1="2"
+       y1="2"
+       x2="11"
+       y2="11"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         stop-color="#9A9A9A"
+         id="stop1-3" />
+      <stop
+         offset="1"
+         stop-color="#F1F1F1"
+         id="stop2-6" />
+    </linearGradient>
+    <linearGradient
+       id="paint1_linear_19_8762"
+       x1="2"
+       y1="2"
+       x2="11"
+       y2="11"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         stop-color="#353535"
+         id="stop3" />
+      <stop
+         offset="1"
+         stop-color="#9C9C9C"
+         id="stop4" />
+    </linearGradient>
+    <linearGradient
+       id="paint0_linear_19_8762-2"
+       x1="2"
+       y1="2"
+       x2="11"
+       y2="11"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         stop-color="#9A9A9A"
+         id="stop1-3-0" />
+      <stop
+         offset="1"
+         stop-color="#F1F1F1"
+         id="stop2-6-2" />
+    </linearGradient>
+    <linearGradient
+       id="paint1_linear_19_8762-3"
+       x1="2"
+       y1="2"
+       x2="11"
+       y2="11"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         stop-color="#353535"
+         id="stop3-7" />
+      <stop
+         offset="1"
+         stop-color="#9C9C9C"
+         id="stop4-5" />
+    </linearGradient>
+    <linearGradient
+       id="paint0_linear_19_6903-2"
+       x1="2"
+       y1="2"
+       x2="11"
+       y2="11"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         stop-color="#9A9A9A"
+         id="stop1-9" />
+      <stop
+         offset="1"
+         stop-color="#F1F1F1"
+         id="stop2-3" />
+    </linearGradient>
+    <linearGradient
+       id="paint0_linear_19_8762-3"
+       x1="2"
+       y1="2"
+       x2="11"
+       y2="11"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         stop-color="#9A9A9A"
+         id="stop1-3-6" />
+      <stop
+         offset="1"
+         stop-color="#F1F1F1"
+         id="stop2-6-1" />
+    </linearGradient>
+    <linearGradient
+       id="paint1_linear_19_8762-0"
+       x1="2"
+       y1="2"
+       x2="11"
+       y2="11"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         stop-color="#353535"
+         id="stop3-6" />
+      <stop
+         offset="1"
+         stop-color="#9C9C9C"
+         id="stop4-3" />
+    </linearGradient>
+    <linearGradient
+       id="paint0_linear_19_8762-3-5"
+       x1="2"
+       y1="2"
+       x2="11"
+       y2="11"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         stop-color="#9A9A9A"
+         id="stop1-3-6-6" />
+      <stop
+         offset="1"
+         stop-color="#F1F1F1"
+         id="stop2-6-1-9" />
+    </linearGradient>
+    <linearGradient
+       id="paint1_linear_19_8762-0-3"
+       x1="2"
+       y1="2"
+       x2="11"
+       y2="11"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         stop-color="#353535"
+         id="stop3-6-7" />
+      <stop
+         offset="1"
+         stop-color="#9C9C9C"
+         id="stop4-3-4" />
+    </linearGradient>
+  </defs>
+  <style
+     id="current-color-scheme"
+     type="text/css">
+      .ColorScheme-Text {
+      }
+      .ColorScheme-Background{
+      }
+      .ColorScheme-Highlight{
+      }
+      .ColorScheme-ViewText {
+      }
+      .ColorScheme-ViewBackground{
+      }
+      .ColorScheme-ViewHover {
+      }
+      .ColorScheme-ViewFocus{
+      }
+      .ColorScheme-ButtonText {
+      }
+      .ColorScheme-ButtonBackground{
+      }
+      .ColorScheme-ButtonHover {
+      }
+      .ColorScheme-ButtonFocus{
+      }
+  </style>
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-32.324837,-326.39774)">
+    <g
+       id="active-center"
+       transform="matrix(1.0769231,0,0,1.076923,32.324837,326.39774)"
+       inkscape:label="#active-center">
+      <rect
+         id="Button"
+         x="1.5"
+         y="1.5"
+         width="10"
+         height="10"
+         fill="url(#paint0_linear_19_6903)"
+         stroke="#262626"
+         style="fill:url(#paint0_linear_19_6903)" />
+      <g
+         id="inner-shadow">
+        <path
+           id="white"
+           fill-rule="evenodd"
+           clip-rule="evenodd"
+           d="M 2,11 H 3 V 3 h 8 V 2 H 3 2 v 1 z"
+           fill="#ffffff" />
+        <path
+           id="gray"
+           fill-rule="evenodd"
+           clip-rule="evenodd"
+           d="m 11,2 h -1 v 8 H 2 v 1 h 8 1 v -1 z"
+           fill="#808080" />
+      </g>
+      <rect
+         id="Button_2"
+         x="1.5"
+         y="5.5"
+         width="10"
+         height="2"
+         stroke="#262626"
+         style="fill:none" />
+      <path
+         id="white_2"
+         fill-rule="evenodd"
+         clip-rule="evenodd"
+         d="M 13,0 H 12 V 12 H 0 v 1 h 12 1 z"
+         fill="#ffffff" />
+      <path
+         id="Gray"
+         fill-rule="evenodd"
+         clip-rule="evenodd"
+         d="M 0,12 H 1 V 0.999999 L 12,1 V 0 L 1,-9.61651e-7 1.04907e-6,-1.04907e-6 Z"
+         fill="#808080" />
+    </g>
+    <g
+       id="hover-center"
+       transform="matrix(1.0769231,0,0,1.076923,32.324837,342.39774)"
+       inkscape:label="#hover-center">
+      <rect
+         id="Button-7"
+         x="1.5"
+         y="1.5"
+         width="10"
+         height="10"
+         fill="url(#paint0_linear_19_8762)"
+         stroke="#262626"
+         style="fill:url(#paint0_linear_19_8762)" />
+      <g
+         id="inner-shadow-5">
+        <path
+           id="white-3"
+           fill-rule="evenodd"
+           clip-rule="evenodd"
+           d="M 2,11 H 3 V 3 h 8 V 2 H 3 2 v 1 z"
+           fill="#ffffff" />
+        <path
+           id="gray-5"
+           fill-rule="evenodd"
+           clip-rule="evenodd"
+           d="m 11,2 h -1 v 8 H 2 v 1 h 8 1 v -1 z"
+           fill="#808080" />
+      </g>
+      <rect
+         id="Rectangle 13"
+         x="2"
+         y="2"
+         width="9"
+         height="9"
+         fill="url(#paint1_linear_19_8762)"
+         fill-opacity="0.8"
+         style="fill:url(#paint1_linear_19_8762)" />
+      <rect
+         id="Button_2-6"
+         x="1.5"
+         y="5.5"
+         width="10"
+         height="2"
+         stroke="#262626"
+         style="fill:none" />
+      <path
+         id="white_2-2"
+         fill-rule="evenodd"
+         clip-rule="evenodd"
+         d="M 13,0 H 12 V 12 H 0 v 1 h 12 1 z"
+         fill="#ffffff" />
+      <path
+         id="Gray-9"
+         fill-rule="evenodd"
+         clip-rule="evenodd"
+         d="M 0,12 H 1 V 0.999999 L 12,1 V 0 L 1,-9.61651e-7 1.04907e-6,-1.04907e-6 Z"
+         fill="#808080" />
+    </g>
+    <g
+       id="pressed-center"
+       transform="matrix(1.0769231,0,0,1.076923,32.324837,358.39774)"
+       inkscape:label="#pressed-center">
+      <rect
+         id="Button-7-2"
+         x="1.5"
+         y="1.5"
+         width="10"
+         height="10"
+         fill="url(#paint0_linear_19_8762)"
+         stroke="#262626"
+         style="fill:url(#paint0_linear_19_8762-2)" />
+      <g
+         id="inner-shadow-5-2">
+        <path
+           id="white-3-8"
+           fill-rule="evenodd"
+           clip-rule="evenodd"
+           d="M 2,11 H 3 V 3 h 8 V 2 H 3 2 v 1 z"
+           fill="#ffffff" />
+        <path
+           id="gray-5-9"
+           fill-rule="evenodd"
+           clip-rule="evenodd"
+           d="m 11,2 h -1 v 8 H 2 v 1 h 8 1 v -1 z"
+           fill="#808080" />
+      </g>
+      <rect
+         id="Rectangle 13-7"
+         x="2"
+         y="2"
+         width="9"
+         height="9"
+         fill="url(#paint1_linear_19_8762)"
+         fill-opacity="0.8"
+         style="fill:url(#paint1_linear_19_8762-3)" />
+      <rect
+         id="Button_2-6-3"
+         x="1.5"
+         y="5.5"
+         width="10"
+         height="2"
+         stroke="#262626"
+         style="fill:none" />
+      <path
+         id="white_2-2-6"
+         fill-rule="evenodd"
+         clip-rule="evenodd"
+         d="M 13,0 H 12 V 12 H 0 v 1 h 12 1 z"
+         fill="#ffffff" />
+      <path
+         id="Gray-9-1"
+         fill-rule="evenodd"
+         clip-rule="evenodd"
+         d="M 0,12 H 1 V 0.999999 L 12,1 V 0 L 1,-9.61651e-7 1.04907e-6,-1.04907e-6 Z"
+         fill="#808080" />
+    </g>
+    <g
+       id="inactive-center"
+       transform="matrix(1.1666667,0,0,1.1666666,48.324837,326.39774)"
+       inkscape:label="#inactive-center">
+      <rect
+         id="Button-9"
+         x="1.5"
+         y="1.5"
+         width="10"
+         height="10"
+         fill="url(#paint0_linear_19_6903)"
+         stroke="#262626"
+         style="display:none;fill:url(#paint0_linear_19_6903-2)" />
+      <g
+         id="inner-shadow-4">
+        <path
+           id="white-7"
+           fill-rule="evenodd"
+           clip-rule="evenodd"
+           d="M 2,11 H 3 V 3 h 8 V 2 H 3 2 v 1 z"
+           fill="#ffffff"
+           style="display:inline" />
+        <path
+           id="gray-8"
+           fill-rule="evenodd"
+           clip-rule="evenodd"
+           d="m 11,2 h -1 v 8 H 2 v 1 h 8 1 v -1 z"
+           fill="#808080" />
+      </g>
+      <rect
+         id="Button_2-4"
+         x="2.408704"
+         y="5.4589543"
+         width="8.082592"
+         height="2.0825918"
+         stroke="#262626"
+         style="fill:none;stroke:#808080;stroke-width:0.917408;stroke-opacity:1" />
+      <path
+         id="white_2-5"
+         fill-rule="evenodd"
+         clip-rule="evenodd"
+         d="M 13,0 H 12 V 12 H 0 v 1 h 12 1 z"
+         fill="#ffffff"
+         style="display:none" />
+      <path
+         id="Gray-0"
+         fill-rule="evenodd"
+         clip-rule="evenodd"
+         d="M 0,12 H 1 V 0.999999 L 12,1 V 0 L 1,-9.61651e-7 1.04907e-6,-1.04907e-6 Z"
+         fill="#808080" />
+    </g>
+    <g
+       id="hover-inactive-center"
+       transform="matrix(1.1666667,0,0,1.1666666,48.324837,342.39774)"
+       inkscape:label="#hover-inactive-center">
+      <rect
+         id="Button-7-0"
+         x="1.5"
+         y="1.5"
+         width="10"
+         height="10"
+         fill="url(#paint0_linear_19_8762)"
+         stroke="#262626"
+         style="display:none;fill:url(#paint0_linear_19_8762-3)" />
+      <g
+         id="inner-shadow-5-6">
+        <path
+           id="white-3-1"
+           fill-rule="evenodd"
+           clip-rule="evenodd"
+           d="M 2,11 H 3 V 3 h 8 V 2 H 3 2 v 1 z"
+           fill="#ffffff" />
+        <path
+           id="gray-5-5"
+           fill-rule="evenodd"
+           clip-rule="evenodd"
+           d="m 11,2 h -1 v 8 H 2 v 1 h 8 1 v -1 z"
+           fill="#808080" />
+      </g>
+      <rect
+         id="Rectangle 13-5"
+         x="2"
+         y="2"
+         width="9"
+         height="9"
+         fill="url(#paint1_linear_19_8762)"
+         fill-opacity="0.8"
+         style="fill:url(#paint1_linear_19_8762-0)" />
+      <rect
+         id="Button_2-6-4"
+         x="2.408704"
+         y="5.458704"
+         width="8.082592"
+         height="2.0825922"
+         stroke="#262626"
+         style="fill:none;stroke:#808080;stroke-width:0.917408;stroke-opacity:1" />
+      <path
+         id="white_2-2-7"
+         fill-rule="evenodd"
+         clip-rule="evenodd"
+         d="M 13,0 H 12 V 12 H 0 v 1 h 12 1 z"
+         fill="#ffffff"
+         style="display:none" />
+      <path
+         id="Gray-9-6"
+         fill-rule="evenodd"
+         clip-rule="evenodd"
+         d="M 0,12 H 1 V 0.999999 L 12,1 V 0 L 1,-9.61651e-7 1.04907e-6,-1.04907e-6 Z"
+         fill="#808080"
+         inkscape:label="Gray-9-6" />
+    </g>
+    <g
+       id="pressed-inactive-center"
+       transform="matrix(1.1666667,0,0,1.1666666,48.324837,358.39774)"
+       inkscape:label="#pressed-inactive-center">
+      <rect
+         id="Button-7-0-2"
+         x="1.5"
+         y="1.5"
+         width="10"
+         height="10"
+         fill="url(#paint0_linear_19_8762)"
+         stroke="#262626"
+         style="display:none;fill:url(#paint0_linear_19_8762-3-5)" />
+      <g
+         id="inner-shadow-5-6-5">
+        <path
+           id="white-3-1-4"
+           fill-rule="evenodd"
+           clip-rule="evenodd"
+           d="M 2,11 H 3 V 3 h 8 V 2 H 3 2 v 1 z"
+           fill="#ffffff" />
+        <path
+           id="gray-5-5-7"
+           fill-rule="evenodd"
+           clip-rule="evenodd"
+           d="m 11,2 h -1 v 8 H 2 v 1 h 8 1 v -1 z"
+           fill="#808080" />
+      </g>
+      <rect
+         id="Rectangle 13-5-4"
+         x="2"
+         y="2"
+         width="9"
+         height="9"
+         fill="url(#paint1_linear_19_8762)"
+         fill-opacity="0.8"
+         style="fill:url(#paint1_linear_19_8762-0-3)" />
+      <rect
+         id="Button_2-6-4-4"
+         x="2.408704"
+         y="5.458704"
+         width="8.082592"
+         height="2.0825922"
+         stroke="#262626"
+         style="fill:none;stroke:#808080;stroke-width:0.917408;stroke-opacity:1" />
+      <path
+         id="white_2-2-7-3"
+         fill-rule="evenodd"
+         clip-rule="evenodd"
+         d="M 13,0 H 12 V 12 H 0 v 1 h 12 1 z"
+         fill="#ffffff"
+         style="display:none" />
+      <path
+         id="Gray-9-6-0"
+         fill-rule="evenodd"
+         clip-rule="evenodd"
+         d="M 0,12 H 1 V 0.999999 L 12,1 V 0 L 1,-9.61651e-7 1.04907e-6,-1.04907e-6 Z"
+         fill="#808080"
+         inkscape:label="Gray-9-6" />
+    </g>
+  </g>
+</svg>

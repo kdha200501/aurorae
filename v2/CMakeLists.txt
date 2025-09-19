@@ -27,3 +27,8 @@ target_link_libraries(aurorae_v2
 )
 
 install(TARGETS aurorae_v2 DESTINATION ${KDE_INSTALL_PLUGINDIR}/org.kde.kdecoration3)
+
+install(DIRECTORY themes/
+        DESTINATION ${KDE_INSTALL_DATADIR}/aurorae/themes)
+
+file(COPY themes/ DESTINATION ${CMAKE_BINARY_DIR}/bin/aurorae/themes)

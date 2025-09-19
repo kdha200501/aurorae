@@ -69,4 +69,3 @@ install(
         ${KDE_INSTALL_DATADIR}/kwin/aurorae
 )
 
-add_subdirectory(themes)

@@ -13,14 +13,14 @@ Decoration {
     property alias decorationMask: maskItem.mask
     property alias supportsMask: backgroundSvg.supportsMask
     Component.onCompleted: {
-        borders.left   = Qt.binding(function() { return Math.max(0, auroraeTheme.borderLeft);});
-        borders.right  = Qt.binding(function() { return Math.max(0, auroraeTheme.borderRight);});
-        borders.top    = Qt.binding(function() { return Math.max(0, auroraeTheme.borderTop);});
+        borders.left   = Qt.binding(function() { return Math.max(0, auroraeTheme.borderLeft - 1);});
+        borders.right  = Qt.binding(function() { return Math.max(0, auroraeTheme.borderRight + decoration.client.maximized ? 3 : 0);});
+        borders.top    = Qt.binding(function() { return Math.max(0, auroraeTheme.borderTop - 7);});
         borders.bottom = Qt.binding(function() { return Math.max(0, auroraeTheme.borderBottom);});
-        maximizedBorders.left   = Qt.binding(function() { return Math.max(0, auroraeTheme.borderLeftMaximized);});
-        maximizedBorders.right  = Qt.binding(function() { return Math.max(0, auroraeTheme.borderRightMaximized);});
+        maximizedBorders.left   = Qt.binding(function() { return Math.max(0, auroraeTheme.borderLeftMaximized - 1);});
+        maximizedBorders.right  = Qt.binding(function() { return Math.max(0, auroraeTheme.borderRightMaximized + decoration.client.maximized ? 3 : 0);});
         maximizedBorders.bottom = Qt.binding(function() { return Math.max(0, auroraeTheme.borderBottomMaximized);});
-        maximizedBorders.top    = Qt.binding(function() { return Math.max(0, auroraeTheme.borderTopMaximized);});
+        maximizedBorders.top    = Qt.binding(function() { return Math.max(0, auroraeTheme.borderTopMaximized - 7);});
         padding.left   = auroraeTheme.paddingLeft;
         padding.right  = auroraeTheme.paddingRight;
         padding.bottom = auroraeTheme.paddingBottom;
@@ -58,7 +58,7 @@ Decoration {
         imagePath: backgroundSvg.imagePath
         prefix: "decoration"
         opacity: shown ? 1 : 0
-        enabledBorders: decoration.client.maximized ? KSvg.FrameSvg.NoBorder : KSvg.FrameSvg.TopBorder | KSvg.FrameSvg.BottomBorder | KSvg.FrameSvg.LeftBorder | KSvg.FrameSvg.RightBorder
+        enabledBorders: KSvg.FrameSvg.TopBorder | KSvg.FrameSvg.BottomBorder | KSvg.FrameSvg.LeftBorder | KSvg.FrameSvg.RightBorder
         Behavior on opacity {
             enabled: root.animate
             NumberAnimation {
@@ -125,52 +125,52 @@ Decoration {
             }
         }
     }
-    AuroraeButtonGroup {
-        id: leftButtonGroup
-        buttons: options.titleButtonsLeft
-        width: childrenRect.width
-        animate: root.animate
-        anchors {
-            left: root.left
-            leftMargin: decoration.client.maximized ? auroraeTheme.titleEdgeLeftMaximized : (auroraeTheme.titleEdgeLeft + root.padding.left)
-        }
-    }
-    AuroraeButtonGroup {
-        id: rightButtonGroup
-        buttons: options.titleButtonsRight
-        width: childrenRect.width
-        animate: root.animate
-        anchors {
-            right: root.right
-            rightMargin: decoration.client.maximized ? auroraeTheme.titleEdgeRightMaximized : (auroraeTheme.titleEdgeRight + root.padding.right)
-        }
-    }
-    Text {
-        id: caption
-        text: decoration.client.caption
-        textFormat: Text.PlainText
-        horizontalAlignment: auroraeTheme.horizontalAlignment
-        verticalAlignment: auroraeTheme.verticalAlignment
-        elide: Text.ElideRight
-        height: Math.max(auroraeTheme.titleHeight, auroraeTheme.buttonHeight * auroraeTheme.buttonSizeFactor)
-        color: decoration.client.active ? auroraeTheme.activeTextColor : auroraeTheme.inactiveTextColor
-        font: options.titleFont
-        renderType: Text.NativeRendering
-        anchors {
-            left: leftButtonGroup.right
-            right: rightButtonGroup.left
-            top: root.top
-            topMargin: decoration.client.maximized ? auroraeTheme.titleEdgeTopMaximized : (auroraeTheme.titleEdgeTop + root.padding.top)
-            leftMargin: auroraeTheme.titleBorderLeft
-            rightMargin: auroraeTheme.titleBorderRight
-        }
-        Behavior on color {
-            enabled: root.animate
-            ColorAnimation {
-                duration: auroraeTheme.animationTime
-            }
-        }
-    }
+//    AuroraeButtonGroup {
+//        id: leftButtonGroup
+//        buttons: options.titleButtonsLeft
+//        width: childrenRect.width
+//        animate: root.animate
+//        anchors {
+//            left: root.left
+//            leftMargin: decoration.client.maximized ? auroraeTheme.titleEdgeLeftMaximized : (auroraeTheme.titleEdgeLeft + root.padding.left)
+//        }
+//    }
+//    AuroraeButtonGroup {
+//        id: rightButtonGroup
+//        buttons: options.titleButtonsRight
+//        width: childrenRect.width
+//        animate: root.animate
+//        anchors {
+//            right: root.right
+//            rightMargin: decoration.client.maximized ? auroraeTheme.titleEdgeRightMaximized : (auroraeTheme.titleEdgeRight + root.padding.right)
+//        }
+//    }
+//    Text {
+//        id: caption
+//        text: decoration.client.caption
+//        textFormat: Text.PlainText
+//        horizontalAlignment: auroraeTheme.horizontalAlignment
+//        verticalAlignment: auroraeTheme.verticalAlignment
+//        elide: Text.ElideRight
+//        height: Math.max(auroraeTheme.titleHeight, auroraeTheme.buttonHeight * auroraeTheme.buttonSizeFactor)
+//        color: decoration.client.active ? auroraeTheme.activeTextColor : auroraeTheme.inactiveTextColor
+//        font: options.titleFont
+//        renderType: Text.NativeRendering
+//        anchors {
+//            left: leftButtonGroup.right
+//            right: rightButtonGroup.left
+//            top: root.top
+//            topMargin: decoration.client.maximized ? auroraeTheme.titleEdgeTopMaximized : (auroraeTheme.titleEdgeTop + root.padding.top)
+//            leftMargin: auroraeTheme.titleBorderLeft
+//            rightMargin: auroraeTheme.titleBorderRight
+//        }
+//        Behavior on color {
+//            enabled: root.animate
+//            ColorAnimation {
+//                duration: auroraeTheme.animationTime
+//            }
+//        }
+//    }
     KSvg.FrameSvgItem {
         id: innerBorder
         anchors {
@@ -193,6 +193,104 @@ Decoration {
             NumberAnimation {
                 duration: auroraeTheme.animationTime
             }
+        }
+    }
+
+    Rectangle {
+        id: leftButtonGroup
+        height: childrenRect.height
+        width: childrenRect.width + 6
+        anchors {
+            top: root.top
+            left: root.left
+            topMargin: 2
+            rightMargin: 0
+            bottomMargin: 0
+            leftMargin: 2
+        }
+        color: decoration.client.active ? "#CCCCCC" : "#DDDDDD"
+        AuroraeButtonGroup {
+            id: leftButtonGroupCta
+            buttons: options.titleButtonsLeft
+            height: childrenRect.height
+            width: childrenRect.width
+            anchors {
+                top: parent.top
+                horizontalCenter: parent.horizontalCenter
+                topMargin: 1
+                rightMargin: 1
+                bottomMargin: 1
+                leftMargin: 1
+            }
+            animate: root.animate
+        }
+    }
+    Rectangle {
+        id: rightButtonGroup
+        height: childrenRect.height
+        width: childrenRect.width + 6
+        anchors {
+            top: root.top
+            right: root.right
+            topMargin: 2
+            rightMargin: 4
+            bottomMargin: 0
+            leftMargin: 0
+        }
+        color: decoration.client.active ? "#CCCCCC" : "#DDDDDD"
+        AuroraeButtonGroup {
+              id: rightButtonGroupCta
+              buttons: options.titleButtonsRight
+              height: childrenRect.height
+              width: childrenRect.width
+              anchors {
+                  top: parent.top
+                  horizontalCenter: parent.horizontalCenter
+                  topMargin: 1
+                  rightMargin: 1
+                  bottomMargin: 1
+                  leftMargin: 1
+              }
+              animate: root.animate
+          }
+    }
+    Rectangle {
+        id: caption
+        height: 15
+        width: captionMetrics.width + 15
+        anchors {
+            horizontalCenter: parent.horizontalCenter
+            //left: leftButtonGroup.right
+            //right: rightButtonGroup.left
+            top: root.top
+            topMargin: auroraeTheme.titleEdgeTop + root.padding.top + 2
+            leftMargin: auroraeTheme.titleBorderLeft
+            rightMargin: auroraeTheme.titleBorderRight
+        }
+        color: decoration.client.active ? "#CCCCCC" : "#DDDDDD"
+        Text {
+            id: captionText
+            text: decoration.client.caption
+            textFormat: Text.PlainText
+            horizontalAlignment: auroraeTheme.horizontalAlignment
+            verticalAlignment: auroraeTheme.verticalAlignment
+            elide: Text.ElideRight
+            color: decoration.client.active ? auroraeTheme.activeTextColor : auroraeTheme.inactiveTextColor
+            //font: options.titleFont
+            font.pixelSize: 12
+            renderType: Text.NativeRendering
+            anchors.centerIn: parent
+            Behavior on color {
+                enabled: root.animate
+                ColorAnimation {
+                    duration: auroraeTheme.animationTime
+                }
+            }
+        }
+        TextMetrics {
+            id: captionMetrics
+            text: decoration.client.caption
+            font: options.titleFont
         }
     }
     KSvg.FrameSvgItem {

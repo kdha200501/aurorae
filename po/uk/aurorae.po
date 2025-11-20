@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: aurorae\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2025-11-20 00:43+0000\n"
 "PO-Revision-Date: 2025-03-15 08:49+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -18,85 +18,85 @@ msgstr ""
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Lokalize 23.04.3\n"
 
-#: src/config/auroraeconfig.cpp:48
+#: config/auroraeconfig.cpp:48
 #, kde-format
 msgctxt "@item:inlistbox Button size:"
 msgid "Tiny"
 msgstr "Крихітний"
 
-#: src/config/auroraeconfig.cpp:49
+#: config/auroraeconfig.cpp:49
 #, kde-format
 msgctxt "@item:inlistbox Button size:"
 msgid "Normal"
 msgstr "Звичайний"
 
-#: src/config/auroraeconfig.cpp:50
+#: config/auroraeconfig.cpp:50
 #, kde-format
 msgctxt "@item:inlistbox Button size:"
 msgid "Large"
 msgstr "Великий"
 
-#: src/config/auroraeconfig.cpp:51
+#: config/auroraeconfig.cpp:51
 #, kde-format
 msgctxt "@item:inlistbox Button size:"
 msgid "Very Large"
 msgstr "Дуже великий"
 
-#: src/config/auroraeconfig.cpp:52
+#: config/auroraeconfig.cpp:52
 #, kde-format
 msgctxt "@item:inlistbox Button size:"
 msgid "Huge"
 msgstr "Величезний"
 
-#: src/config/auroraeconfig.cpp:53
+#: config/auroraeconfig.cpp:53
 #, kde-format
 msgctxt "@item:inlistbox Button size:"
 msgid "Very Huge"
 msgstr "Гігантський"
 
-#: src/config/auroraeconfig.cpp:54
+#: config/auroraeconfig.cpp:54
 #, kde-format
 msgctxt "@item:inlistbox Button size:"
 msgid "Oversized"
 msgstr "Найбільший"
 
-#: src/config/auroraeconfig.cpp:57
+#: config/auroraeconfig.cpp:57
 #, kde-format
 msgid "Button size:"
 msgstr "Розмір кнопок:"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, PlastikConfigDialog)
-#: themes/plastik/package/contents/ui/config.ui:14
+#: v1/themes/plastik/package/contents/ui/config.ui:14
 #, kde-format
 msgid "Config Dialog"
 msgstr "Вікно налаштувань"
 
 #. i18n: ectx: property (title), widget (KButtonGroup, titleAlign)
-#: themes/plastik/package/contents/ui/config.ui:23
+#: v1/themes/plastik/package/contents/ui/config.ui:23
 #, kde-format
 msgid "Title &Alignment"
 msgstr "Ви&рівнювання заголовка"
 
 #. i18n: ectx: property (text), widget (QRadioButton, kcfg_titleAlignLeft)
-#: themes/plastik/package/contents/ui/config.ui:29
+#: v1/themes/plastik/package/contents/ui/config.ui:29
 #, kde-format
 msgid "Left"
 msgstr "Ліворуч"
 
 #. i18n: ectx: property (text), widget (QRadioButton, kcfg_titleAlignCenter)
-#: themes/plastik/package/contents/ui/config.ui:36
+#: v1/themes/plastik/package/contents/ui/config.ui:36
 #, kde-format
 msgid "Center"
 msgstr "За центром"
 
 #. i18n: ectx: property (text), widget (QRadioButton, kcfg_titleAlignRight)
-#: themes/plastik/package/contents/ui/config.ui:43
+#: v1/themes/plastik/package/contents/ui/config.ui:43
 #, kde-format
 msgid "Right"
 msgstr "Праворуч"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_coloredBorder)
-#: themes/plastik/package/contents/ui/config.ui:53
+#: v1/themes/plastik/package/contents/ui/config.ui:53
 #, kde-format
 msgid ""
 "Check this option if the window border should be painted in the titlebar "
@@ -106,13 +106,13 @@ msgstr ""
 "смужки заголовка. Інакше, будуть вжиті кольори звичайних меж вікна."
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_coloredBorder)
-#: themes/plastik/package/contents/ui/config.ui:56
+#: v1/themes/plastik/package/contents/ui/config.ui:56
 #, kde-format
 msgid "Colored window border"
 msgstr "Кольорове обрамлення вікна"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_animateButtons)
-#: themes/plastik/package/contents/ui/config.ui:66
+#: v1/themes/plastik/package/contents/ui/config.ui:66
 #, kde-format
 msgid ""
 "Check this option if you want the buttons to fade in when the mouse pointer "
@@ -122,7 +122,7 @@ msgstr ""
 "підсвічувались, а при відведенні — згасали."
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_animateButtons)
-#: themes/plastik/package/contents/ui/config.ui:69
+#: v1/themes/plastik/package/contents/ui/config.ui:69
 #, kde-format
 msgid "Animate buttons"
 msgstr "Анімація кнопок"

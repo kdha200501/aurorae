@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: aurorae\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2025-11-20 00:43+0000\n"
 "PO-Revision-Date: 2025-03-15 13:30+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -17,85 +17,85 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 24.12.3\n"
 
-#: src/config/auroraeconfig.cpp:48
+#: config/auroraeconfig.cpp:48
 #, kde-format
 msgctxt "@item:inlistbox Button size:"
 msgid "Tiny"
 msgstr "Heel klein"
 
-#: src/config/auroraeconfig.cpp:49
+#: config/auroraeconfig.cpp:49
 #, kde-format
 msgctxt "@item:inlistbox Button size:"
 msgid "Normal"
 msgstr "Normaal"
 
-#: src/config/auroraeconfig.cpp:50
+#: config/auroraeconfig.cpp:50
 #, kde-format
 msgctxt "@item:inlistbox Button size:"
 msgid "Large"
 msgstr "Groot"
 
-#: src/config/auroraeconfig.cpp:51
+#: config/auroraeconfig.cpp:51
 #, kde-format
 msgctxt "@item:inlistbox Button size:"
 msgid "Very Large"
 msgstr "Erg groot"
 
-#: src/config/auroraeconfig.cpp:52
+#: config/auroraeconfig.cpp:52
 #, kde-format
 msgctxt "@item:inlistbox Button size:"
 msgid "Huge"
 msgstr "Enorm"
 
-#: src/config/auroraeconfig.cpp:53
+#: config/auroraeconfig.cpp:53
 #, kde-format
 msgctxt "@item:inlistbox Button size:"
 msgid "Very Huge"
 msgstr "Extra enorm"
 
-#: src/config/auroraeconfig.cpp:54
+#: config/auroraeconfig.cpp:54
 #, kde-format
 msgctxt "@item:inlistbox Button size:"
 msgid "Oversized"
 msgstr "Veel te groot"
 
-#: src/config/auroraeconfig.cpp:57
+#: config/auroraeconfig.cpp:57
 #, kde-format
 msgid "Button size:"
 msgstr "Knopgrootte:"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, PlastikConfigDialog)
-#: themes/plastik/package/contents/ui/config.ui:14
+#: v1/themes/plastik/package/contents/ui/config.ui:14
 #, kde-format
 msgid "Config Dialog"
 msgstr "Configuratiedialoog"
 
 #. i18n: ectx: property (title), widget (KButtonGroup, titleAlign)
-#: themes/plastik/package/contents/ui/config.ui:23
+#: v1/themes/plastik/package/contents/ui/config.ui:23
 #, kde-format
 msgid "Title &Alignment"
 msgstr "Titeluitlij&ning"
 
 #. i18n: ectx: property (text), widget (QRadioButton, kcfg_titleAlignLeft)
-#: themes/plastik/package/contents/ui/config.ui:29
+#: v1/themes/plastik/package/contents/ui/config.ui:29
 #, kde-format
 msgid "Left"
 msgstr "Links"
 
 #. i18n: ectx: property (text), widget (QRadioButton, kcfg_titleAlignCenter)
-#: themes/plastik/package/contents/ui/config.ui:36
+#: v1/themes/plastik/package/contents/ui/config.ui:36
 #, kde-format
 msgid "Center"
 msgstr "Midden"
 
 #. i18n: ectx: property (text), widget (QRadioButton, kcfg_titleAlignRight)
-#: themes/plastik/package/contents/ui/config.ui:43
+#: v1/themes/plastik/package/contents/ui/config.ui:43
 #, kde-format
 msgid "Right"
 msgstr "Rechts"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_coloredBorder)
-#: themes/plastik/package/contents/ui/config.ui:53
+#: v1/themes/plastik/package/contents/ui/config.ui:53
 #, kde-format
 msgid ""
 "Check this option if the window border should be painted in the titlebar "
@@ -106,13 +106,13 @@ msgstr ""
 "ingekleurd."
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_coloredBorder)
-#: themes/plastik/package/contents/ui/config.ui:56
+#: v1/themes/plastik/package/contents/ui/config.ui:56
 #, kde-format
 msgid "Colored window border"
 msgstr "Gekleurde vensterrand"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_animateButtons)
-#: themes/plastik/package/contents/ui/config.ui:66
+#: v1/themes/plastik/package/contents/ui/config.ui:66
 #, kde-format
 msgid ""
 "Check this option if you want the buttons to fade in when the mouse pointer "
@@ -122,7 +122,7 @@ msgstr ""
 "muisaanwijzer overheen gaat."
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_animateButtons)
-#: themes/plastik/package/contents/ui/config.ui:69
+#: v1/themes/plastik/package/contents/ui/config.ui:69
 #, kde-format
 msgid "Animate buttons"
 msgstr "Bewegende knoppen"

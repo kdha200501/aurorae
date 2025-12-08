@@ -22,7 +22,7 @@ DecorationButton::States DecorationButton::states() const
     if (decoration()->window()->isActive()) {
         states |= State::Active;
     }
-    if (isHovered()) {
+    if (isHovered() || isParentHovered()) {
         states |= State::Hovered;
     }
     if (isPressed()) {
@@ -32,6 +32,20 @@ DecorationButton::States DecorationButton::states() const
         states |= State::Disabled;
     }
     return states;
+}
+
+void DecorationButton::setParentHovered(bool hovered)
+{
+    if (m_parentHovered == hovered) {
+        return;
+    }
+    m_parentHovered = hovered;
+    Q_EMIT parentHoveredChanged(hovered);
+}
+
+bool DecorationButton::isParentHovered() const
+{
+    return m_parentHovered;
 }
 
 SvgFrameSet SvgFrameSet::from(const QString &imagePath, const QSizeF &implicitSize, qreal devicePixelRatio)
@@ -235,6 +249,7 @@ SvgDecorationButton::SvgDecorationButton(KDecoration3::DecorationButtonType type
     connect(this, &KDecoration3::DecorationButton::pressedChanged, this, &SvgDecorationButton::updateFrame);
     connect(this, &KDecoration3::DecorationButton::hoveredChanged, this, &SvgDecorationButton::updateFrame);
     connect(this, &KDecoration3::DecorationButton::enabledChanged, this, &SvgDecorationButton::updateFrame);
+    connect(this, &DecorationButton::parentHoveredChanged, this, &SvgDecorationButton::updateFrame);
 }
 
 void SvgDecorationButton::setImagePath(const QString &path, const QSizeF &implicitSize)
@@ -316,6 +331,7 @@ MaximizeDecorationButton::MaximizeDecorationButton(KDecoration3::Decoration *dec
     connect(this, &KDecoration3::DecorationButton::pressedChanged, this, &MaximizeDecorationButton::updateFrame);
     connect(this, &KDecoration3::DecorationButton::hoveredChanged, this, &MaximizeDecorationButton::updateFrame);
     connect(this, &KDecoration3::DecorationButton::enabledChanged, this, &MaximizeDecorationButton::updateFrame);
+    connect(this, &DecorationButton::parentHoveredChanged, this, &MaximizeDecorationButton::updateFrame);
 }
 
 void MaximizeDecorationButton::setImagePath(const QString &maximizeImagePath, const QString &restoreImagePath, const QSizeF &implicitSize)

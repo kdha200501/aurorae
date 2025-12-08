@@ -29,6 +29,15 @@ public:
     DecorationButton(KDecoration3::DecorationButtonType type, KDecoration3::Decoration *decoration, QObject *parent = nullptr);
 
     States states() const;
+
+    void setParentHovered(bool hovered);
+    bool isParentHovered() const;
+
+Q_SIGNALS:
+    void parentHoveredChanged(bool hovered);
+
+private:
+    bool m_parentHovered = false;
 };
 
 struct SvgFrameSet

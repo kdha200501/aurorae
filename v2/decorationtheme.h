@@ -47,6 +47,7 @@ public:
     qreal buttonWidth() const;
     qreal buttonHeight() const;
     qreal buttonSpacing() const;
+    bool buttonGroupHover() const;
     qreal buttonMarginTop() const;
     qreal buttonMarginTopMaximized() const;
     int animationTime() const;
@@ -126,6 +127,7 @@ private:
     qreal m_buttonWidthAppMenu;
     qreal m_buttonHeight;
     qreal m_buttonSpacing;
+    bool m_buttonGroupHover;
     qreal m_buttonMarginTop;
     qreal m_buttonMarginTopMaximized;
     qreal m_explicitButtonSpacer;

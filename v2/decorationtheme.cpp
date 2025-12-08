@@ -121,6 +121,7 @@ DecorationTheme::DecorationTheme(const QString &themeName)
     m_buttonWidth = std::round(m_buttonWidth * scaleFactor);
     m_buttonHeight = std::round(scaleFactor * border.readEntry("ButtonHeight", 20));
     m_buttonSpacing = std::round(scaleFactor * border.readEntry("ButtonSpacing", 5));
+    m_buttonGroupHover = border.readEntry("ButtonGroupHover", false);
     m_buttonMarginTop = std::round(scaleFactor * border.readEntry("ButtonMarginTop", 0));
     m_buttonMarginTopMaximized = std::round(scaleFactor * border.readEntry("ButtonMarginTopMaximized", 0));
     m_explicitButtonSpacer = std::round(scaleFactor * border.readEntry("ExplicitButtonSpacer", 10));
@@ -322,6 +323,11 @@ qreal DecorationTheme::buttonHeight() const
 qreal DecorationTheme::buttonSpacing() const
 {
     return m_buttonSpacing;
+}
+
+bool DecorationTheme::buttonGroupHover() const
+{
+    return m_buttonGroupHover;
 }
 
 qreal DecorationTheme::buttonMarginTop() const

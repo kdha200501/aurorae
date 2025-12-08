@@ -7,8 +7,9 @@
 
 #pragma once
 
+#include "decorationbuttongroup.h"
+
 #include <KDecoration3/Decoration>
-#include <KDecoration3/DecorationButtonGroup>
 #include <KSharedConfig>
 
 namespace KSvg
@@ -82,8 +83,8 @@ private:
     KSvg::FrameSvg *m_currentDecoration = nullptr;
     KSvg::FrameSvg *m_currentInnerBorder = nullptr;
 
-    std::unique_ptr<KDecoration3::DecorationButtonGroup> m_leftButtons;
-    std::unique_ptr<KDecoration3::DecorationButtonGroup> m_rightButtons;
+    std::unique_ptr<DecorationButtonGroup> m_leftButtons;
+    std::unique_ptr<DecorationButtonGroup> m_rightButtons;
     std::unique_ptr<QTimer> m_buttonsTimer;
 
     QRectF m_captionRect;

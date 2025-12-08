@@ -9,6 +9,7 @@ set_target_properties(aurorae_v2 PROPERTIES
 target_sources(aurorae_v2 PRIVATE
     decoration.cpp
     decorationbutton.cpp
+    decorationbuttongroup.cpp
     decorationtheme.cpp
     decorationthemeprovider.cpp
     logging.cpp

@@ -7,6 +7,7 @@
 
 #include "decoration.h"
 #include "decorationbutton.h"
+#include "decorationbuttongroup.h"
 #include "decorationtheme.h"
 #include "decorationthemeprovider.h"
 
@@ -112,16 +113,19 @@ bool Decoration::init()
         m_blur->setEnabledBorders(KSvg::FrameSvg::AllBorders);
     }
 
-    m_leftButtons = std::make_unique<KDecoration3::DecorationButtonGroup>(KDecoration3::DecorationButtonGroup::Position::Left, this, std::bind_front(&Decoration::instantiateButton, this));
+    m_leftButtons = std::make_unique<DecorationButtonGroup>(DecorationButtonGroup::Position::Left, this, std::bind_front(&Decoration::instantiateButton, this));
     m_leftButtons->setSpacing(m_theme->buttonSpacing());
-    m_rightButtons = std::make_unique<KDecoration3::DecorationButtonGroup>(KDecoration3::DecorationButtonGroup::Position::Right, this, std::bind_front(&Decoration::instantiateButton, this));
+    m_leftButtons->setButtonGroupHover(m_theme->buttonGroupHover());
+
+    m_rightButtons = std::make_unique<DecorationButtonGroup>(DecorationButtonGroup::Position::Right, this, std::bind_front(&Decoration::instantiateButton, this));
     m_rightButtons->setSpacing(m_theme->buttonSpacing());
+    m_rightButtons->setButtonGroupHover(m_theme->buttonGroupHover());
 
     m_buttonsTimer = std::make_unique<QTimer>();
     m_buttonsTimer->setSingleShot(true);
     connect(m_buttonsTimer.get(), &QTimer::timeout, this, &Decoration::positionButtons);
-    connect(m_leftButtons.get(), &KDecoration3::DecorationButtonGroup::geometryChanged, m_buttonsTimer.get(), qOverload<>(&QTimer::start));
-    connect(m_rightButtons.get(), &KDecoration3::DecorationButtonGroup::geometryChanged, m_buttonsTimer.get(), qOverload<>(&QTimer::start));
+    connect(m_leftButtons.get(), &DecorationButtonGroup::geometryChanged, m_buttonsTimer.get(), qOverload<>(&QTimer::start));
+    connect(m_rightButtons.get(), &DecorationButtonGroup::geometryChanged, m_buttonsTimer.get(), qOverload<>(&QTimer::start));
 
     updateBorders();
     updateResizeOnlyBorders();

@@ -115,7 +115,7 @@ msgstr "窗口边框着色"
 msgid ""
 "Check this option if you want the buttons to fade in when the mouse pointer "
 "hovers over them and fade out again when it moves away."
-msgstr "勾选此项后，鼠标光标移入或移出按钮时，按钮将显示颜色渐变的动效。"
+msgstr "勾选此项后，鼠标指针移入或移出按钮时，按钮将显示颜色渐变的动效。"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_animateButtons)
 #: v1/themes/plastik/package/contents/ui/config.ui:69
